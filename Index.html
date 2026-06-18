@@ -13,27 +13,33 @@
   <input type="password" id="password" placeholder="Password">
   <br><br>
 
+  <p id="msg" style="color:red"></p>
+
   <button type="submit">Submit</button>
 
 </form>
 
 <script>
 function validate() {
+
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("password").value;
 
-  if (name === "" || email === "" || password === "") {
-    alert("All fields are required!");
+  let msg = document.getElementById("msg");
+
+  if(name == "" || email == "" || password == ""){
+    msg.innerText = "Fill all fields";
     return false;
   }
 
-  if (password.length < 8) {
-    alert("Password must be at least 8 characters!");
+  if(password.length < 8){
+    msg.innerText = "Password must be 8 characters";
     return false;
   }
 
-  alert("Form Submitted Successfully!");
+  msg.innerText = "";
+  alert("Form Submitted");
   return true;
 }
 </script>
