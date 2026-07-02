@@ -3,23 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Weather App</title>
+    <title>Weather, News & AI Chat</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="weather-container">
-        <h2>Mausam Ka Haal</h2>
-        <div class="search-box">
-            <input type="text" id="city-input" placeholder="Enter city name...">
-            <button id="search-btn">Check</button>
+    <div class="main-container">
+
+       
+        <div class="weather-container">
+
+            <h2>Mausam Ka Haal</h2>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="city-input"
+                    placeholder="Enter city name..."
+                >
+
+                <button id="search-btn">
+                    Check
+                </button>
+            </div>
+
+            <div class="weather-result">
+
+                <h3 id="city">
+                    Search a city
+                </h3>
+
+                <div id="temp" class="temp">
+                    --°C
+                </div>
+
+                <div id="desc" class="desc">
+                    Weather information will appear here
+                </div>
+
+                <p id="humidity"></p>
+
+                <hr>
+
+                <h3>Latest News</h3>
+
+                <div id="news-container">
+                    No news available
+                </div>
+
+            </div>
+
         </div>
-        
-        <div id="weather-result" class="weather-result">
-            <p class="message">City ka naam dalo aur check karo!</p>
+
+        <!-- AI Chat -->
+        <div class="ai-container">
+
+            <h2>🤖 AI Assistant</h2>
+
+            <div id="chat-box" class="chat-box">
+
+                <div class="ai-message">
+                    👋 Hello! I am your AI Assistant. Ask me anything.
+                </div>
+
+            </div>
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="user-input"
+                    placeholder="Type your question..."
+                >
+
+                <button id="send-btn">
+                    Send
+                </button>
+
+            </div>
+
         </div>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
